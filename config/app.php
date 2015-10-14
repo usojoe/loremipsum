@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => 'loremipsum.josephandrewlee.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY', '95ayGzNw8AiWg3pUvnDQXl0gWmurCrt8'),
 
     'cipher' => 'AES-256-CBC',
 
