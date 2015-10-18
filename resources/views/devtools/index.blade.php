@@ -26,13 +26,13 @@ such as a page specific styesheets.
 <h2>Lorem Ipsum Generator</h2>
 <p>Create random text to populate your database.</p>
 
-    <form method="POST" action="/latintextblocks">
+    <form method="POST" action="/devtools">
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
             Blocks of Text to Generate: <input type="number" name="blocks" min="1" max="10">
 
-            <input class="button" type="submit" name="submitbutton" value="printblocks">
+            <input class="submit" type="submit" name="submitbutton" value="blocks">
 
           </form>
 
@@ -41,11 +41,11 @@ such as a page specific styesheets.
             <p>Create random users to populate your database.</p>
 
 
-    <form method="POST" action="/randomusers">
+    <form method="POST" action="/devtools">
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 <br>
-          <label for='randomuser'>How many user profiles do you want to generate?</label>
-          <input type="number" name="randomuser" min='1' max='10'>
+          <label for='user'>How many user profiles do you want to generate?</label>
+          <input type="number" name="numberofuser" min='1' max='100'>
 <br>
           <label for='image'>Do you want images?</label>
             <input type="checkbox" name="image"

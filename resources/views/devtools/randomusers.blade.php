@@ -27,16 +27,14 @@
                 <?php
                     if (isset($_POST["birthday"]))
                         echo "checked";
-                ?>>
+                ?>
             <label for="birthday">birthday</label>
-
-
 
             <input id="profile" type="checkbox" name="profile"
                 <?php
                     if (isset($_POST["profile"]))
                         echo "checked";
-                ?>>
+                ?>
             <label for="profile">Profile Description</label>
 
             <input type="submit" value="Generate">
@@ -45,6 +43,8 @@
 @stop
 
 @section("results2")
+
+
 
 @stop
 
