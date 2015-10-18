@@ -12,14 +12,14 @@
     <!--Random User Creation form-->
     <form>
 
-            <label for="users">Users:</label>
+            <label for="numberofusers">Users:</label>
 
-
-            <input type="number" name="users" maxlength="100" min='1'
+            <input type="number" name="numberofusers" maxlength="100" min='1'
             <?php
                     if (!isset($_POST["randomuser"]))
 
                         echo $_POST["randomuser"];
+                    else echo "this string";
                 ?>
 
 
