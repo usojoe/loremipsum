@@ -9,7 +9,7 @@ class BlockController extends Controller {
 //create LorumIpsum Blocks
 	public function getIndex() {
 
-      return view('devtools.latinblocks')->with('name', 'San Juan Vacation');
+      return view('/devtools')->with('name', 'San Juan Vacation');
 
 //    $generator = new Badcow\LoremIpsum\Generator();
 //    $paragraphs = $generator->getParagraphs(5);

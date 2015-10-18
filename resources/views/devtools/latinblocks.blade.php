@@ -1,7 +1,6 @@
 @extends("layouts.master")
 
 @section("form1")
-
     <form>
 
             <label for="blocks">Number of text blocks:</label>

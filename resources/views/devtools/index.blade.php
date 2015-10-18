@@ -61,8 +61,4 @@
 
 @section('body')
 
-{{ 'LoremIpsumDisplay' }}
-
-{{ 'RandomUserDisplay' }}
-
 @stop
