@@ -20,7 +20,7 @@
     @yield('content')
 
        </div>
-
+       
     <footer class='container'>
     <p>&copy; Photographic &amp; Communication Services, {{ date('Y') }} <p>
     </footer>
