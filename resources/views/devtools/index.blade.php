@@ -21,7 +21,15 @@
 <h2>Lorem Ipsum Generator</h2>
 <p>Create random text to populate your database.</p>
 
-    <form method="POST" action="/devtools">
+@if($errors->get('title'))
+<ul>
+  @foreach ($errors->get('title') as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+      @endif
+
+    <form method="POST" action="devtools">
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
@@ -35,7 +43,7 @@
             <h2>Random User Generator</h2>
             <p>Create random users to populate your database.</p>
 
-    <form method="POST" action="/devtools">
+    <form method="POST" action="devtools">
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 <br>
           <label for='user'>How many user profiles do you want to generate?</label>

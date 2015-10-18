@@ -1,6 +1,15 @@
 @extends("layouts.master")
 
 @section("form2")
+
+@if($errors->get('title'))
+<ul>
+  @foreach ($errors->get('title') as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+      @endif
+
     <!--Random User Creation form-->
     <form method="POST" action='devtools.create'>
 
@@ -57,6 +66,7 @@
 @stop
 
 @section("results2")
+
 
 
 @stop

@@ -3,6 +3,14 @@
 <body>
   <h1>This here is the example view</h1>
 
+  @if($errors->get('title'))
+  <ul>
+    @foreach ($errors->get('title') as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+        @endif
+
 <form method="POST" action="/example">
 
 <input type="hidden" name="_token" value='{{ csrf_token() }}'>
