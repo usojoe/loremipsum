@@ -26,7 +26,7 @@ such as a page specific styesheets.
 <h2>Lorem Ipsum Generator</h2>
 <p>Create random text to populate your database.</p>
 
-    <form>
+    <form method="POST" action="/latintextblocks">
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
@@ -41,7 +41,7 @@ such as a page specific styesheets.
             <p>Create random users to populate your database.</p>
 
 
-    <form>
+    <form method="POST" action="/randomusers">
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 <br>
           <label for='randomuser'>How many user profiles do you want to generate?</label>

@@ -11,7 +11,8 @@
         "rych/random": "^0.1.0",
         "jcloutz/forger": "dev-master",
         "magyarjeti/laravel-lipsum": "dev-master",
-        "pdt256/shipping": "1.0.*@dev"
+        "pdt256/shipping": "1.0.*@dev",
+        "rap2hpoutre/laravel-log-viewer": "^0.4.3"
 
     },
     "require-dev": {

@@ -24,4 +24,9 @@ Route::post("/devtools", "BlockController@postBlocks");
 Route::post("/devtools", "RandomUserController@postRandomUser");
 Route::controller("example", "ExampleController");
 
+
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+
 ?>
