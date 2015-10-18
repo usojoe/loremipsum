@@ -22,14 +22,13 @@ class IndexController extends Controller
 public function postIndex(Request $request)
 {
 
-
 		$this->validate($request, [
 
 			'blocks' => 'required',
 
 	]);
-	  //dd($request->all());
-			print Lipsum::short()->text(3);
+	  dd($request->all());
+
 	}
 }
 

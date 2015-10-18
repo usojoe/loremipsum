@@ -14,16 +14,14 @@ body {
 }
 footer {
     position:absolute;
-    margin-right: 0
-    margin-bottom: 0;
+    margin: 0 auto;
     height: 100px;
     width: 100%;
 }
 
 
 body {
-    margin-left: 0px;
-    margin-top: 0px;
+    margin: 0 auto;
     height: 100%;
     width: 100%;
     display: table;

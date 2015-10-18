@@ -9,15 +9,14 @@ use App\Http\Controllers\Controller;
 class LipsumController extends Controller {
 
 //create LorumIpsum Blocks
-	public function getBlock() {
-
-      return view('devtools.blocks');
-
-		}
 
 	public function postBlock() {
 
-			return "this sting of text.";
+			$oneshortblock = new Lipsum::short()->text(1);
+			$twoshortblocks = new Lipsum::short()->text(2);
+			$threeshortblocks = new Lipsum::short()->text(3);
+			$fourshortblocks = new Lipsum::short()->text(4);
+			$fourshortblocks = new Lipsum::short()->text(5);
 
 		}
 
