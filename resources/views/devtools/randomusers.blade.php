@@ -2,7 +2,7 @@
 
 @section("form2")
     <!--Random User Creation form-->
-    <form method="POST" action='/devtools'>
+    <form method="POST" action='devtools.create'>
 
             <label for="numberofusers">Users:</label>
 
@@ -11,7 +11,8 @@
             <?php
                     if (isset($_POST["numberofusers"]))
 
-                    echo "this many:";
+                        echo $faker->name, "\n";
+}
                 ?>
 
                 <input id="image" type="checkbox" name="image">
@@ -50,14 +51,13 @@
 
             <label for="profile">Full Profile Description?</label>
 
-            <input type="submit" value="Generate">
+            <input type="submit" class="btn btn-primary" value="Generate">
         </p>
     </form>
 @stop
 
 @section("results2")
 
-@yield {{ '$results2' }}
 
 @stop
 

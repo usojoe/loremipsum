@@ -27,7 +27,7 @@
 
             Blocks of Text to Generate: <input type="number" name="blocks" min="1" max="10">
 
-            <input class="submit" type="submit" name="submitbutton" value="blocks">
+            <input class="btn btn-primary" type="submit" name="submitbutton" value="Submit">
 
     </form>
 
@@ -52,8 +52,9 @@
 <br>
             <label for='streetaddress'>Street Address?</label>
             <input type="checkbox" name="streetaddress">
+
 <br>
-            <input class="button" type="submit" name="submitbutton" value="generate">
+            <input type="submit" class="btn btn-primary" name="submitbutton" value="Create Users">
 
       </form>
 

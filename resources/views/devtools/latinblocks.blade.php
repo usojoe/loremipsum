@@ -3,15 +3,15 @@
 @section("form1")
     <form>
 
-            <label for="blocks">Number of text blocks:</label>
-            <input type="number" name="blocks" maxlength="100" min="1"
+            <label for="submit">Number of text blocks:</label>
+            <input type="number" name="submit" maxlength="100" min="1">
 
             <?php
                     if (!isset($_POST["blocks"]))
                         echo $_POST["blocks"];
                 ?>
 
-            <input id="blocks" type="submit" value="create">
+            <input type="submit" class="btn-btnprimary" value="create">
         </p>
     </form>
 @stop

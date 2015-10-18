@@ -6,17 +6,20 @@ use App\Http\Controllers\Controller;
 
 class RandomUserController extends Controller {
 
-	public function postRandomUser() {
-
-		return view('/devtools')->with('$name','$address');
-	}
-
 	public function getRandomUser() {
-		    $faker = \Faker\Factory::create();
 
-	      $name = $faker->name;
-				$address = $faker->address;
+		return view('devtools.users');
 
+//			  $faker = \Faker\Factory::create();
+
+	  //    $name = $faker->name;
+	//			$address = $faker->address;
+
+}
+
+	public function postRandomUser(Request $request) {
+
+		return 'New Name:'.$request->input('name');
 
 	}
 
