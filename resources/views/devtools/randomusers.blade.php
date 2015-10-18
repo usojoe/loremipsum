@@ -1,13 +1,5 @@
 @extends("layouts.master")
 
-@section("headlinetext2")
-    Random User Creator
-@stop
-
-@section("subhead2")
-    creation of reandom users</p>
-@stop
-
 @section("form2")
     <!--Random User Creation form-->
     <form>
@@ -44,7 +36,7 @@
 
 @section("results2")
 
-
+{{ '$results1' }}
 
 @stop
 

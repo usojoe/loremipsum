@@ -1,13 +1,5 @@
 @extends("layouts.master")
 
-@section("headlinetext1")
-    Lorem Ipsum Generator
-@stop
-
-@section("subhead1")
-    blocks of latin text
-@stop
-
 @section("form1")
 
     <form>
@@ -27,13 +19,12 @@
 
 @section("results1")
 
-    <p id="blocks_generated" class="scrollbox"></p>
+{{ '$results1' }}
 
 @stop
 
-
-
 @section("footer")
 
+{{ '$footer' }}
 
 @stop

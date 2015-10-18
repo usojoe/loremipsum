@@ -1,6 +1,8 @@
 @extends('layouts.master')
+<!--                           -->
+@section('title')
 
-@section('title') Tools of the Trade
+<h1>Tools of the Trade</h1>
 
 @stop
 

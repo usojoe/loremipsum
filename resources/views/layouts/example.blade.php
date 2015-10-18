@@ -1,7 +1,7 @@
 <html>
 ​
 <body>
-  <h1>This is the example view</h1>
+  <h1>This here is the example view</h1>
 
 <form method="POST" action="/example">
 

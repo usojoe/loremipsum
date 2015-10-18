@@ -4,7 +4,7 @@
     <title>
 
         @yield('title','Yeilded Master Tools of the Trade')
-        
+
     </title>
 
     <meta charset='utf-8'>
@@ -32,7 +32,6 @@
     <p>&copy; Photographic &amp; Communication Services, {{ date('Y') }} <p>
     </footer>
 
-    {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')
 
 
