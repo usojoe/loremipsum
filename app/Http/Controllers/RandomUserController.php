@@ -12,7 +12,7 @@ class RandomUserController extends Controller {
 
 		return view('devtools.index');
 
-//			  $faker = \Faker\Factory::create();
+ $faker = \Faker\Factory::create();
 
 	  //    $name = $faker->name;
 	//			$address = $faker->address;

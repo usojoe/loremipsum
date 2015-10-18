@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class BlockController extends Controller {
+class LipsumController extends Controller {
 
 //create LorumIpsum Blocks
 	public function getBlock() {

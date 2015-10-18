@@ -29,8 +29,7 @@ public function postIndex(Request $request)
 
 	]);
 	  //dd($request->all());
-
-			return "Process the form.";
+			print Lipsum::short()->text(3);
 	}
 }
 
