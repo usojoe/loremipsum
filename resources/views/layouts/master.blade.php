@@ -1,11 +1,6 @@
 <!doctype html>
 <html>
 <head>
-    <title>
-
-        @yield('title','Yeilded Master Tools of the Trade')
-
-    </title>
 
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,8 +20,6 @@
     @yield('content')
 
        </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <footer class='container'>
     <p>&copy; Photographic &amp; Communication Services, {{ date('Y') }} <p>

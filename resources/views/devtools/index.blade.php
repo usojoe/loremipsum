@@ -29,7 +29,7 @@
 
             <input class="submit" type="submit" name="submitbutton" value="blocks">
 
-          </form>
+    </form>
 
 <br>
             <h2>Random User Generator</h2>
@@ -55,7 +55,7 @@
 <br>
             <input class="button" type="submit" name="submitbutton" value="generate">
 
-            </form>
+      </form>
 
 @stop
 
