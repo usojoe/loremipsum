@@ -17,9 +17,15 @@ such as a page specific styesheets.
 
 @section('content')
 
-<h1> This is a test header</h1>
+<header>
+    <img
+    src='images/hipsterlogo.png'
+    alt='Loremipsum Logo'>
+</header>
 
-<!--
+<h2>Lorem Ipsum Generator</h2>
+<p>Create random text to populate your database.</p>
+
     <form>
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
@@ -56,7 +62,6 @@ such as a page specific styesheets.
             <input class="button" type="submit" name="submitbutton" value="generate">
 
             </form>
---->
 
 @stop
 

@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 class BlockController extends Controller {
 
 //create LorumIpsum Blocks
-	public function index() {
+	public function getIndex() {
 
       return view('devtools.latinblocks')->with('name', 'San Juan Vacation');
 

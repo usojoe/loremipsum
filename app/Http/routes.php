@@ -22,5 +22,6 @@ Route::post("/devtools", "BlockController@postBlocks");
 //Route::post("/devtools/blocks", "BlockController@postBlocks");
 //Route::post('/devtools/randomusers', 'RandomUserController@getRandomUser');
 Route::post("/devtools", "RandomUserController@postRandomUser");
+Route::controller("example", "ExampleController");
 
 ?>

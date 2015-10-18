@@ -16,7 +16,7 @@ class IndexController extends Controller
 
 	public function getIndex()
 	{
-		return view('layouts.master');
+		return view('devtools.index');
 	}
 
 public function postIndex(Request $request)
