@@ -6,34 +6,19 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class RandomUserController extends Controller {
+class RandomUserController extends Controller
+{
+    public function postIndex() {
+        $faker = \Faker\Factory::create();
 
-	public function getRandomUser() {
+				//Take data form input fields
 
-		return view('devtools.index');
+$numberofusers = \Input::get("numberofsers");
+$profile = \Input::get("profile");
+$image = \Input::get("image");
+$streetaddress = \Input::get("streetaddress");
 
- $faker = \Faker\Factory::create();
-
-	  //    $name = $faker->name;
-	//			$address = $faker->address;
-
-}
-	public function postRandomUser(Request $request) {
-			$this->validate(
-			$request,
-			[
-
-				'numberofusers' => 'required|min:1|max:100',
-
-
-			]
-
-				);
-
-//		return 'New Name:'.$request->input('name');
-
-	}
-
+    }
 }
 
 ?>

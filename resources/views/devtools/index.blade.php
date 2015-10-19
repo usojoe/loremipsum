@@ -1,9 +1,9 @@
 @extends('layouts.master')
 <!--                           -->
 @section('title')
-
-<h1>Tools of the Trade</h1>
-
+<div class="container">
+<h1>Developer's Best Friend</h1>
+</div>
 @stop
 
 @section('head')
@@ -29,11 +29,13 @@
       </ul>
       @endif
 
-    <form method="POST" action="devtools">
+    <form id="block_generator" method="POST" action="devtools">
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
             Blocks of Text to Generate: <input type="number" name="blocks" min="1" max="10">
+
+@yield('results1')
 
             <input class="btn btn-primary" type="submit" name="submitbutton" value="Submit">
 
@@ -43,11 +45,23 @@
             <h2>Random User Generator</h2>
             <p>Create random users to populate your database.</p>
 
-    <form method="POST" action="devtools">
-            <input type="hidden" name="_token" value='{{ csrf_token() }}'>
+            @if($errors->get('title'))
+            <ul>
+              @foreach ($errors->get('title') as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                  @endif
+
+    <form id="user_generator" method="POST" action="devtools">
+
+          <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 <br>
-          <label for='user'>How many user profiles do you want to generate?</label>
-          <input type="number" name="numberofuser" min='1' max='100'>
+          <label for='numberofusers'>How many user profiles do you want to generate?</label>
+          <input type="number" name="numberofusers" min='1' max='100'>
+
+@yield('results2')
+
 <br>
           <label for='image'>Do you want images?</label>
             <input type="checkbox" name="image">

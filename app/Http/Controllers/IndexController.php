@@ -21,15 +21,50 @@ class IndexController extends Controller
 
 public function postIndex(Request $request)
 {
+	  $faker = \Faker\Factory::create();
 
-		$this->validate($request, [
+    $numberofusers = $request->input('numberofusers');
+		$blocks = $request->input('blocks');
+		$image = $request->input('image');
+		$birthday = $request->input('birthday');
+		$profile = $request->input('profile');
+		$streetaddress = $request->input('streetaddress');
 
-			'blocks' => 'required',
+	//	if isset($blocks->)) {
 
-	]);
-	  dd($request->all());
+			echo $faker->name;
+			echo $faker->address;
+			echo $faker->text;
 
-	}
-}
+//	else {
+	//		echo $c;
+
+		}
+
+
+   }
+
+  //	$this->validate($request, [
+
+ 		//	'blocks' => 'required',
+
+// 	]);
+
+//if (isset($blocks [])) {
+
+//return <?php
+
+//$random = new Rych\Random\Random();
+
+// Generate a 16-byte string of random raw data
+//$randomBytes = $random->getRandomBytes(16);
+
+// Get a random integer between 1 and 100
+//$randomNumber = $random->getRandomInteger(1, 100);
+
+// Get a random 8-character string using the
+// character set A-Za-z0-9./
+//$randomString = $random->getRandomString(8);
+
 
 ?>

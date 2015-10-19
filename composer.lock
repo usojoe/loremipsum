@@ -4,9 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8bc4ae54274bcc82189cced911ee9524",
-    "content-hash": "05fc74902033d39d7bb99bd074c31404",
+    "hash": "31ccd198ca3786ac5e3eea5c15fbcba9",
+    "content-hash": "cdc72f48f4fbf148de635e8b49d9bf73",
     "packages": [
+        {
+            "name": "badcow/lorem-ipsum",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Badcow/LoremIpsum.git",
+                "reference": "7e685497e92d71d0ebbd067d51892f3308cc72e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Badcow/LoremIpsum/zipball/7e685497e92d71d0ebbd067d51892f3308cc72e1",
+                "reference": "7e685497e92d71d0ebbd067d51892f3308cc72e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "suggest": {
+                "twig/twig": "Twig is a template language for PHP, released under the new BSD license (code and documentation)."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Badcow\\LoremIpsum\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Williams",
+                    "email": "sam@badcow.co"
+                },
+                {
+                    "name": "Mathew Tinsley",
+                    "email": "tinsley@tinsology.net"
+                }
+            ],
+            "description": "Lorem ipsum generator.",
+            "time": "2015-04-10 00:15:43"
+        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v2.0.6",
@@ -1062,16 +1105,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "df1207683dfbd1399f0fa931a368082a28fed50b"
+                "reference": "7fe2420f8ad46aa08d5b317c92a148611d366d88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/df1207683dfbd1399f0fa931a368082a28fed50b",
-                "reference": "df1207683dfbd1399f0fa931a368082a28fed50b",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/7fe2420f8ad46aa08d5b317c92a148611d366d88",
+                "reference": "7fe2420f8ad46aa08d5b317c92a148611d366d88",
                 "shasum": ""
             },
             "require": {
@@ -1103,7 +1146,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2015-10-16 14:10:15"
+            "time": "2015-10-18 21:39:26"
         },
         {
             "name": "pdt256/shipping",
@@ -3346,7 +3389,8 @@
     "stability-flags": {
         "jcloutz/forger": 20,
         "magyarjeti/laravel-lipsum": 20,
-        "pdt256/shipping": 20
+        "pdt256/shipping": 20,
+        "badcow/lorem-ipsum": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
