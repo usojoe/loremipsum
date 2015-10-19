@@ -8,17 +8,44 @@ use App\Http\Controllers\Controller;
 
 class RandomUserController extends Controller
 {
-    public function postIndex() {
-        $faker = \Faker\Factory::create();
+	public function postIndex(Request $request)
+	{
+		  $faker = \Faker\Factory::create();
 
-				//Take data form input fields
+	    $numberofusers = $request->input('numberofusers');
+			$blocks = $request->input('blocks');
+			$image = $request->input('image');
+			$birthday = $request->input('birthday');
+			$profile = $request->input('profile');
+			$streetaddress = $request->input('streetaddress');
 
-$numberofusers = \Input::get("numberofsers");
-$profile = \Input::get("profile");
-$image = \Input::get("image");
-$streetaddress = \Input::get("streetaddress");
 
-    }
-}
+			echo $faker->name;
+			echo $faker->address;
+			echo $faker->text;
+
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>

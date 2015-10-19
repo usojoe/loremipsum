@@ -4,12 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "31ccd198ca3786ac5e3eea5c15fbcba9",
-    "content-hash": "cdc72f48f4fbf148de635e8b49d9bf73",
+    "hash": "93e13d14ff4c03b39a3d82bb8375b3f0",
+    "content-hash": "489e809faf610e48d2292621af8e7314",
     "packages": [
         {
             "name": "badcow/lorem-ipsum",
-            "version": "dev-master",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Badcow/LoremIpsum.git",
@@ -3389,8 +3389,7 @@
     "stability-flags": {
         "jcloutz/forger": 20,
         "magyarjeti/laravel-lipsum": 20,
-        "pdt256/shipping": 20,
-        "badcow/lorem-ipsum": 20
+        "pdt256/shipping": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

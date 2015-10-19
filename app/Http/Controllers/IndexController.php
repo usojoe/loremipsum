@@ -21,6 +21,8 @@ class IndexController extends Controller
 
 public function postIndex(Request $request)
 {
+
+
 	  $faker = \Faker\Factory::create();
 
     $numberofusers = $request->input('numberofusers');
@@ -30,17 +32,30 @@ public function postIndex(Request $request)
 		$profile = $request->input('profile');
 		$streetaddress = $request->input('streetaddress');
 
+// print a basic user block
+//for ($i=0; $i < 10; $i++) {
+// echo $faker->name, "\n";
+		echo $faker->name;
+		echo $faker->address;
+
+// print a block of LoremIpsum
+      echo $faker->text(2000);
+// Create logic for LoremIpsum text
+	//	for each('blocks')) {
+
+	//	}
+}
+//		$generator = new Badcow\LoremIpsum\Generator();
+//
 	//	if isset($blocks->)) {
 
-			echo $faker->name;
-			echo $faker->address;
-			echo $faker->text;
+//  echo implode('<p>', $paragraphs);
 
-//	else {
-	//		echo $c;
 
-		}
 
+// write logic for request-specific delivery and presentation
+
+// that logic goes here
 
    }
 
