@@ -1,13 +1,13 @@
 @extends("layouts.master")
 
-@section("form2")
+@section('displayusers')
 
-@stop
-
-@section("results2")
-
-@stop
-
-@section("footer")
+<p class="scrollbox">
+              <?php
+                  if (isset($numberofusers))
+                      foreach ($numberofusers as $profile)
+                          echo $profile . "<br><br>";
+              ?>
+          </p>
 
 @stop

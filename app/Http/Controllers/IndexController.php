@@ -19,39 +19,59 @@ class IndexController extends Controller
 		return view('devtools.index');
 	}
 
-public function postIndex(Request $request)
+public function postFakerIndex(Request $request)
+
 {
 
+	$faker = \Faker\Factory::create();
 
+	$faker_text = $faker->text(2000);
+
+echo $faker_text;
+
+}
+
+
+
+public function postIndex(Request $request)
+{
+	// calling the package
 	  $faker = \Faker\Factory::create();
-
+//
     $numberofusers = $request->input('numberofusers');
 		$blocks = $request->input('blocks');
 		$image = $request->input('image');
 		$birthday = $request->input('birthday');
 		$profile = $request->input('profile');
 		$streetaddress = $request->input('streetaddress');
+		$paragraphs = $faker->text(2000);
 
-// print a basic user block
-//for ($i=0; $i < 10; $i++) {
+
+//for ($i=0; $i < 10; $i++)
 // echo $faker->name, "\n";
-		echo $faker->name;
-		echo $faker->address;
+
+//for each ($i=0; $i < 10; $i++);
+//
+	echo $faker->title($gender = null|'male'|'female');
+	echo $faker->name;
+	echo $faker->address;
+	echo $faker->image;
 
 // print a block of LoremIpsum
-      echo $faker->text(2000);
+
+
+}
+
+//return view('homepage',['title' => $title,'text' => $content, 'all' => $all ]);
 // Create logic for LoremIpsum text
 	//	for each('blocks')) {
 
 	//	}
-}
 //		$generator = new Badcow\LoremIpsum\Generator();
 //
 	//	if isset($blocks->)) {
 
 //  echo implode('<p>', $paragraphs);
-
-
 
 // write logic for request-specific delivery and presentation
 

@@ -17,8 +17,11 @@
 
   <div class="container">
 
-    @yield('content')
-
+    @yield('content1')
+    @yield('displaylorem')
+    @yield('content2')
+    @yield('displayusers')
+    
        </div>
 
     <footer class='container'>
@@ -26,7 +29,6 @@
     </footer>
 
     @yield('body')
-
 
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 

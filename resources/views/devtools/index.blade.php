@@ -10,7 +10,7 @@
 
 @stop
 
-@section('content')
+@section('content1')
 
 <header>
 <img
@@ -29,18 +29,18 @@
       </ul>
       @endif
 
-    <form id="block_generator" method="POST" action="devtools">
+    <form id="block_generator" method="POST" action="devtoolsfaker">
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
             Blocks of Text to Generate: <input type="number" name="blocks" min="1" max="10">
 
-@yield('results1')
-
             <input class="btn btn-primary" type="submit" name="submitbutton" value="Submit">
 
     </form>
 
+@stop
+@section('content2')
 <br>
             <h2>Random User Generator</h2>
             <p>Create random users to populate your database.</p>
@@ -59,8 +59,6 @@
 <br>
           <label for='numberofusers'>How many user profiles do you want to generate?</label>
           <input type="number" name="numberofusers" min='1' max='100'>
-
-@yield('results2')
 
 <br>
           <label for='image'>Do you want images?</label>
@@ -82,6 +80,9 @@
 
 @stop
 
+
 @section('body')
+
+
 
 @stop

@@ -1,13 +1,13 @@
 @extends("layouts.master")
 
-@section("results1")
+@section('displaylorem')
 
-{{ '$results1' }}
-
-@stop
-
-@section("footer")
-
-{{ '$footer' }}
+<p class="scrollbox">
+              <?php
+                  if (isset($blocks))
+                      foreach ($blocks as $paragraph)
+                          echo $paragraph . "<br><br>";
+              ?>
+          </p>
 
 @stop
