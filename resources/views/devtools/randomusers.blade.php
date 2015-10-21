@@ -2,12 +2,10 @@
 
 @section('displayusers')
 
-<p class="scrollbox">
-              <?php
-                  if (isset($numberofusers))
-                      foreach ($numberofusers as $profile)
-                          echo $profile . "<br><br>";
-              ?>
-          </p>
+<br><br><br><br><br><br><br><br>
+
+{{ $singleprofile }}
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 @stop

@@ -27,11 +27,15 @@ public function postFakerIndex(Request $request)
 
 	$faker_text = $faker->text(2000);
 
+	$this->validate($request, [
+
+	'blocks' => 'required',
+
+	]);
+
 echo $faker_text;
 
 }
-
-
 
 public function postIndex(Request $request)
 {
@@ -39,26 +43,39 @@ public function postIndex(Request $request)
 	  $faker = \Faker\Factory::create();
 //
     $numberofusers = $request->input('numberofusers');
-		$blocks = $request->input('blocks');
 		$image = $request->input('image');
 		$birthday = $request->input('birthday');
 		$profile = $request->input('profile');
 		$streetaddress = $request->input('streetaddress');
-		$paragraphs = $faker->text(2000);
+
+		$name = $faker->name;
+		$image = $faker->image;
+		$streetaddress = $faker->address;
+		$email = $faker->email;
 
 
-//for ($i=0; $i < 10; $i++)
-// echo $faker->name, "\n";
+		$singleprofile = $name.$email.$profile;
+		$singleprofilewithimage = $name.$image.$email.$profile;
+		$singleprofilewithimageandaddress = $name.$image.$email.$streetaddress.$profile;
+		$singleprofilewithimageaddressandbirthday = $name.$image.$email.$birthday.$streetaddress.$profile;
+
+
+	$this->validate($request, [
+
+		'numberofusers' => 'required',
+
+		]);
+
 
 //for each ($i=0; $i < 10; $i++);
 //
-	echo $faker->title($gender = null|'male'|'female');
-	echo $faker->name;
-	echo $faker->address;
-	echo $faker->image;
+//	echo $faker->title($gender = null|'male'|'female');
+//	echo $faker->name;
+//	echo $faker->address;
+//	echo $faker->image;
 
 // print a block of LoremIpsum
-
+	return view('devtools.randomusers')->with('singleprofile', $singleprofile)->with('singleprofile', $singleprofile);
 
 }
 
@@ -79,11 +96,6 @@ public function postIndex(Request $request)
 
    }
 
-  //	$this->validate($request, [
-
- 		//	'blocks' => 'required',
-
-// 	]);
 
 //if (isset($blocks [])) {
 

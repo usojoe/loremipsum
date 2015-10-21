@@ -24,7 +24,7 @@ Route::post("/devtoolsfaker", "IndexController@postFakerIndex");
 //Route::post("/devtools/blocks", "BlockController@postBlocks");
 //Route::post('/devtools/randomusers', 'RandomUserController@postRandomUser');
 //Route::post("devtools.randomusers", "RandomUserController@postRandomUser");
-Route::controller("example", "ExampleController");
+//Route::controller("example", "ExampleController");
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
