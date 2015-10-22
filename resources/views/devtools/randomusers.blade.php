@@ -4,10 +4,14 @@
 
 <br><br><br><br><br><br><br><br>
 
-@foreach ($singleprofile as $singleprofile)
+@foreach ($allprofiles as $singleprofile)
 
-<h4>Name: {{ $singleprofile }}</h4>
+    @foreach ($singleprofile as $data)
 
+    {{ $data }}    <br>
+
+    @endforeach
+                  <br><br>
 @endforeach
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -47,13 +47,6 @@ public function postIndex(Request $request)
 		$images = $request->input('image');
 		$address = $request->input('streetaddress');
 		$profile = $request->input('profile');
-		$name = $faker->name;
-		$imagesfaker = $faker->image;
-		$title = $faker->title;
-		$addressfaker = $faker->address;
-		$emailfaker = $faker->email;
-		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
-		$profilefaker = $faker->paragraphs($nb = 3);
 
 	  $this->validate($request, [
 
@@ -61,35 +54,41 @@ public function postIndex(Request $request)
 
 		]);
 
-		$singleprofile = array();
+		$allprofiles = array();
 
 			 for ($i = 0; $i < $users; $i++) {
 
-						$singleprofile[$i] = Array($title, $name);
+				$name = $faker->name;
+		 		$imagesfaker = $faker->image;
+		 		$title = $faker->title;
+		 		$addressfaker = $faker->address;
+		 		$emailfaker = $faker->email;
+		 		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
+		 		$profilefaker = $faker->paragraphs($nb = 3);
+
+						//$singleprofile = Array($title, $name);
+
+		$singleprofile = array();
+
+						$singleprofile[] = $name;
 
 						if ($birthday == "TRUE")
-									$singleprofile[$i] = array_merge($singleprofile[$i], Array("birthday" => $birthdayfaker));
+							$singleprofile[] = $emailfaker;
 
 						if ($address == "TRUE")
-									$singleprofile[$i] = array_merge($singleprofile[$i], Array("address" => $addressfaker));
+							$singleprofile[] = $addressfaker;
 
 						if ($images == "TRUE")
-									$singleprofile[$i] = array_merge($singleprofile[$i], Array("image" => $imagesfaker));
+							$singleprofile[] = $imagesfaker;
 
 						if ($profile == "TRUE")
-									$singleprofile[$i] = array_merge($singleprofile[$i], Array("profile" => $birthday));
+							$singleprofile[] = $profilefaker;
+
+						$allprofiles[] = $singleprofile;
 
 								}
 
-$profiles = '';
-
-foreach ($singleprofile[$i] as $profile) {
-
-$profiles .= implode(', ',$profile);
-
-}
-
-return view('devtools.randomusers')->with('singleprofile',$singleprofile);
+return view('devtools.randomusers')->with('allprofiles',$allprofiles);
 
 			//return view('devtools.randomusers',['singleprofile' => $singleprofile]);
 
