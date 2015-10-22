@@ -4,14 +4,11 @@
 
 <br><br><br><br><br><br><br><br>
 
+@foreach ($singleprofile as $singleprofile)
 
-@if (isset($singleprofile))
-         @foreach ($singleprofile as $usr)
-             <p> {{ $usr }} </p>
-         @endforeach
- @endif
+<h4>Name: {{ $singleprofile }}</h4>
 
-
+@endforeach
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 

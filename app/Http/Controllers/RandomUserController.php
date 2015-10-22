@@ -12,19 +12,16 @@ class RandomUserController extends Controller
 	{
 		  $faker = \Faker\Factory::create();
 
-	    $numberofusers = $request->input('numberofusers');
-			$blocks = $request->input('blocks');
-			$image = $request->input('image');
-			$birthday = $request->input('birthday');
-			$profile = $request->input('profile');
-			$streetaddress = $request->input('streetaddress');
+	
 
+$username = array();
 
-			echo $faker->name;
-			echo $faker->address;
-			echo $faker->text;
+	 for ($i = 0; $i < $users; $i++)
+	 {
+				$username[] = '$faker->title.' '.$faker->name';
+	}
 
-		}
+	return view('devtools.randomusers', ['username' => $username]);
 
 	}
 

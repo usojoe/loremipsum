@@ -29,7 +29,7 @@ public function postFakerIndex(Request $request)
 
 	$this->validate($request, [
 
-	'blocks' => 'required',
+	'blocks' => 'required|integer|min:1',
 
 	]);
 
@@ -43,29 +43,49 @@ public function postIndex(Request $request)
 	  $faker = \Faker\Factory::create();
 
 		$users = $request->input('numberofusers');
+		$birthday = $request->input('birthday');
+		$images = $request->input('image');
+		$address = $request->input('streetaddress');
+		$profile = $request->input('profile');
 		$name = $faker->name;
-		$image = $faker->image;
+		$imagesfaker = $faker->image;
 		$title = $faker->title;
-		$streetaddress = $faker->address;
-		$email = $faker->email;
-		$birthday = $faker->date($format = 'Y-m-d', $max = 'now');
-		$profile = $faker->paragraphs($nb = 3);
+		$addressfaker = $faker->address;
+		$emailfaker = $faker->email;
+		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
+		$profilefaker = $faker->paragraphs($nb = 3);
 
 	  $this->validate($request, [
 
-		'numberofusers' => 'required',
+		'numberofusers' => 'required|integer|min:1',
 
 		]);
 
 		$singleprofile = array();
 
-			 for ($i = 0; $i < $users; $i++)
+			 for ($i = 0; $i < $users; $i++) {
 
-			 {
-						$singleprofile[] = '$title'.'$name';
-			}
+						$singleprofile[$i] = Array($title, $name);
 
-			return view('devtools.randomusers', ['singleprofile' => $singleprofile]);
+						if ($birthday == "TRUE")
+									$singleprofile[$i] = array_merge($singleprofile[$i], Array("birthday" => $birthdayfaker));
+
+						if ($address == "TRUE")
+									$singleprofile[$i] = array_merge($singleprofile[$i], Array("address" => $addressfaker));
+
+						if ($images == "TRUE")
+									$singleprofile[$i] = array_merge($singleprofile[$i], Array("image" => $imagesfaker));
+
+						if ($profile == "TRUE")
+									$singleprofile[$i] = array_merge($singleprofile[$i], Array("profile" => $birthday));
+
+								}
+
+// $singleprofile = implode('<p>', $singleprofile);
+
+return view('devtools.randomusers')->with('singleprofile',$singleprofile);
+
+			//return view('devtools.randomusers',['singleprofile' => $singleprofile]);
 
 
 /*
@@ -123,7 +143,6 @@ if isset($blocks->)) {
 */
 
 }
-
    }
 
 
