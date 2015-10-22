@@ -81,7 +81,13 @@ public function postIndex(Request $request)
 
 								}
 
-// $singleprofile = implode('<p>', $singleprofile);
+$profiles = '';
+
+foreach ($singleprofile[$i] as $profile) {
+
+$profiles .= implode(', ',$profile);
+
+}
 
 return view('devtools.randomusers')->with('singleprofile',$singleprofile);
 
