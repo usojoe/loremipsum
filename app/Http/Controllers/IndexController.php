@@ -41,8 +41,35 @@ public function postIndex(Request $request)
 {
 	// calling the package
 	  $faker = \Faker\Factory::create();
-//
-    $numberofusers = $request->input('numberofusers');
+
+		$users = $request->input('numberofusers');
+		$name = $faker->name;
+		$image = $faker->image;
+		$title = $faker->title;
+		$streetaddress = $faker->address;
+		$email = $faker->email;
+		$birthday = $faker->date($format = 'Y-m-d', $max = 'now');
+		$profile = $faker->paragraphs($nb = 3);
+
+	  $this->validate($request, [
+
+		'numberofusers' => 'required',
+
+		]);
+
+		$singleprofile = array();
+
+			 for ($i = 0; $i < $users; $i++)
+
+			 {
+						$singleprofile[] = '$title'.'$name';
+			}
+
+			return view('devtools.randomusers', ['singleprofile' => $singleprofile]);
+
+
+/*
+    $i = $request->input('numberofusers');
 		$image = $request->input('image');
 		$birthday = $request->input('birthday');
 		$profile = $request->input('profile');
@@ -74,10 +101,10 @@ public function postIndex(Request $request)
 //	echo $faker->address;
 //	echo $faker->image;
 
-// print a block of LoremIpsum
-	return view('devtools.randomusers')->with('singleprofile', $singleprofile)->with('singleprofile', $singleprofile);
+if isset($blocks->)) {
 
-}
+	return view('devtools.randomusers')->with('singleprofilewithimageandaddress', $singleprofilewithimageandaddress)->with('singleprofilewithimageandaddress', $singleprofilewithimageandaddress);
+
 
 //return view('homepage',['title' => $title,'text' => $content, 'all' => $all ]);
 // Create logic for LoremIpsum text
@@ -93,6 +120,9 @@ public function postIndex(Request $request)
 // write logic for request-specific delivery and presentation
 
 // that logic goes here
+*/
+
+}
 
    }
 

@@ -4,7 +4,14 @@
 
 <br><br><br><br><br><br><br><br>
 
-{{ $singleprofile }}
+
+@if (isset($singleprofile))
+         @foreach ($singleprofile as $usr)
+             <p> {{ $usr }} </p>
+         @endforeach
+ @endif
+
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
