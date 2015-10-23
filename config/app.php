@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'loremipsum.josephandrewlee.com',
+    'url' => 'p3.josephandrewlee.com',
 
     /*
     |--------------------------------------------------------------------------
