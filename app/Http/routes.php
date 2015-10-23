@@ -11,12 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-return view('welcome');
-});
-
-
-Route::get("/devtools", "IndexController@getIndex");
+Route::get("/", "IndexController@getIndex");
 Route::post("/devtools", "IndexController@postIndex");
 Route::post("/devtoolsfaker", "IndexController@postFakerIndex");
 
