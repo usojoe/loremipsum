@@ -2,9 +2,12 @@
 
 @section('displaylorem')
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-{{ $blocks }}
+  @foreach ($blocks as $data)
+
+    {{ $data }}    <br>
+
+  @endforeach
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 

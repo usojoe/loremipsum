@@ -42,9 +42,15 @@ public function postFakerIndex(Request $request)
 
 	]);
 
+$displayblocks = array();
+
 // display the LoremIpsum paragraphs
 
 for ($i = 0; $i < $paragraphs; $i++) {
+
+   $displayblocks[] = '$blocks';
+
+//	dd($blocks);
 
 return view('devtools.latinblocks')->with('blocks',$blocks);
 
@@ -82,11 +88,6 @@ public function postIndex(Request $request)
 				 		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
 				 		$profilefaker = $faker->paragraphs($nb = 3);
 
-	// create an array to collect the called set of profiles from Faker
-		$allprofiles = array();
-
-			 for ($i = 0; $i < $users; $i++) {
-
 	// create an array for a single user with optional selections
 
 		$singleprofile = array();
@@ -94,22 +95,34 @@ public function postIndex(Request $request)
 						$singleprofile[] = $name;
 
 						if ($birthday == "TRUE")
-							$singleprofile[] = $emailfaker;
+					   	array_push($singleprofile, $emailfaker);
 
 						if ($address == "TRUE")
-							$singleprofile[] = $addressfaker;
+							array_push($singleprofile, $addressfaker);
 
 						if ($images == "TRUE")
-							$singleprofile[] = $imagesfaker;
+							array_push($singleprofile, $imagesfaker);
 
 						if ($profile == "TRUE")
-							$singleprofile[] = $profilefaker;
+							array_push($singleprofile, $profilefaker);
 
-							$allprofiles[] = $singleprofile;
+
+		// create an array to collect the called set of profiles from Faker
+
+		$allprofiles = array();
+
+				$allprofiles[] = $singleprofile;
+
+									 for ($i = 0; $i < $users; $i++) {
+
+										 		dd($allprofiles);
+
+return view('devtools.randomusers')->with('allprofiles',$allprofiles);
 
 								}
 
-return view('devtools.randomusers')->with('allprofiles',$allprofiles);
+
+
 
 			//return view('devtools.randomusers',['singleprofile' => $singleprofile]);
 
