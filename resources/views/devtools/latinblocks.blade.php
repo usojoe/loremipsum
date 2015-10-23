@@ -2,10 +2,7 @@
 
 @section('displaylorem')
 
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    {{ !! blocks !! }}    <br>
+    {{ $paragraphs }}    <br>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 

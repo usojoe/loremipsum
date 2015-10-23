@@ -31,6 +31,34 @@ h4 {
     margin-bottom: -15px;
 }
 
+#moveleft {
+
+    margin-right: 9%;
+
+
+}
+
+#moveright {
+
+    margin-left: 80%;
+
+
+}
+
+#user_generator {
+
+
+
+
+}
+
+#lorem_generator {
+
+
+
+
+}
+
 .container {
     text-align: center;
     display: table-cell;

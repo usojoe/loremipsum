@@ -31,11 +31,12 @@ public function postFakerIndex(Request $request)
 
 	]);
 
-	$blocks = \Lipsum::short()->text(3);
+	$blocks = \Lipsum::long()->text($paragraphs);
 
 for ($i = 0; $i < $paragraphs; $i++) {
 
-return view('devtools.latinblocks')->with('blocks',$blocks);
+
+return view('devtools.latinblocks')->with('paragraphs',$blocks);
 
 }
 

@@ -29,13 +29,13 @@
       </ul>
       @endif
 
-    <form id="block_generator" method="POST" action="devtoolsfaker">
+    <form id="lorem_generator" method="POST" action="devtoolsfaker">
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
-            Blocks of Text to Generate: <input type="number" name="paragraphs" min="1" max="10">
+            Number of Lorem Ipsum Sentences: <input type="number" name="paragraphs" min="1" max="1000">
 
-            <input class="btn btn-primary" type="submit" name="submitbutton" value="Submit">
+            <input class="btn btn-primary" type="submit" name="loremsubmitbutton" value="Submit Request">
 
     </form>
 
@@ -52,22 +52,18 @@
                     @endforeach
                   </ul>
                   @endif
-
     <form id="user_generator" method="POST" action="devtools">
 
           <input type="hidden" name="_token" value='{{ csrf_token() }}'>
-<br>
-          <label for='numberofusers'>How many user profiles do you want to generate?</label>
+          <label for='numberofusers'>How many user profiles?</label>
           <input type="number" name="numberofusers" min='1' max='100'>
-<br>
-            <label for='birthday'>Display birthdays?</label>
-            <input type="checkbox" name="birthday">
-<br>
-            <label for='streetaddress'>Street Address?</label>
-            <input type="checkbox" name="streetaddress">
-
-<br>
-            <input type="submit" class="btn btn-primary" name="submitbutton" value="Create Users">
+          <input type="submit" class="btn btn-primary" name="usersubmitbutton" value="Submit Request">
+          <br><label>(Please allow 20 seconds for the users to generate)</label><br><br><br>
+                      <label>Extra Features:</label><br>
+                      <label for='birthday'>Display birthdays?</label>
+                      <input type="checkbox" name="birthday">
+          <br>
+          <br>
 
       </form>
 

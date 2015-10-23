@@ -22,11 +22,13 @@
     @yield('content2')
     @yield('displayusers')
 
-       </div>
-<br><br>
-    <footer class='container'>
-    <p>&copy; Photographic &amp; Communication Services, {{ date('Y') }} <p>
+
+    <footer id="moveright">
+    <p>&copy; Photographic &amp; Communication Services, {{ date('Y') }}    <p>
     </footer>
+
+       </div>
+<br>
 
     @yield('body')
 
