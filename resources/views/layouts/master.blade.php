@@ -21,9 +21,9 @@
     @yield('displaylorem')
     @yield('content2')
     @yield('displayusers')
-    
-       </div>
 
+       </div>
+<br><br>
     <footer class='container'>
     <p>&copy; Photographic &amp; Communication Services, {{ date('Y') }} <p>
     </footer>

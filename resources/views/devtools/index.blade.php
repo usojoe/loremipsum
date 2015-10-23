@@ -59,13 +59,6 @@
 <br>
           <label for='numberofusers'>How many user profiles do you want to generate?</label>
           <input type="number" name="numberofusers" min='1' max='100'>
-
-<br>
-          <label for='image'>Do you want images?</label>
-            <input type="checkbox" name="image">
-<br>
-          <label for="profile">Profile Description</label>
-            <input type="checkbox" name="profile">
 <br>
             <label for='birthday'>Display birthdays?</label>
             <input type="checkbox" name="birthday">

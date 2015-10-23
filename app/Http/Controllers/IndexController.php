@@ -19,30 +19,19 @@ class IndexController extends Controller
 	}
 
 // display information from the LoremIpsum request form
-public function postFakerIndex(Request $request)
+public function postLoremIndex(Request $request)
 
 {
-// use this package vendor, fzaninotto/Faker
-
-	$faker = \Faker\Factory::create();
-
-// name relevant form variables
 
 	$paragraphs = $request->input('paragraphs');
 
-// define what a block of LoremIpsum Text looks like within the parameters of Faker
-
-	$blocks = $faker->text(2000);
-
-// validate the information in the form was entered correctly
-
 	$this->validate($request, [
 
-	'paragraphs' => 'required|integer|min:1',
+	'paragraphs' => 'required|integer|min:1|max:100',
 
 	]);
 
-// display the LoremIpsum paragraphs
+	$blocks = \Lipsum::short()->text(3);
 
 for ($i = 0; $i < $paragraphs; $i++) {
 
@@ -51,10 +40,6 @@ return view('devtools.latinblocks')->with('blocks',$blocks);
 }
 
 }
-// end display of LoremIpsum
-
-
-// begin display of Random User information
 
 public function postIndex(Request $request)
 {
@@ -72,10 +57,10 @@ public function postIndex(Request $request)
 	// validate information is entered into the form correctly
 	  $this->validate($request, [
 
-		'numberofusers' => 'required|integer|min:1',
+		'numberofusers' => 'required|integer|min:1|max:100',
 
 		]);
-		
+
  	// create an array to collect the called set of profiles from Faker
 		$allprofiles = array();
 

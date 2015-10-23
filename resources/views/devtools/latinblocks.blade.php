@@ -5,11 +5,7 @@
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-  @foreach ($blocks as $data)
-
-    {{ $data }}    <br>
-
-  @endforeach
+    {{ !! blocks !! }}    <br>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 

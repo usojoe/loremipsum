@@ -18,7 +18,7 @@ return view('welcome');
 
 Route::get("/devtools", "IndexController@getIndex");
 Route::post("/devtools", "IndexController@postIndex");
-Route::post("/devtoolsfaker", "IndexController@postFakerIndex");
+Route::post("/devtoolslorem", "IndexController@postLoremIndex");
 
 //Route::post("/devtools", "BlockController@postBlocks");
 //Route::post("/devtools/blocks", "BlockController@postBlocks");
