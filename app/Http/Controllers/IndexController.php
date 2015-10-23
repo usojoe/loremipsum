@@ -19,7 +19,7 @@ class IndexController extends Controller
 	}
 
 // display information from the LoremIpsum request form
-public function postLoremIndex(Request $request)
+public function postFakerIndex(Request $request)
 
 {
 
