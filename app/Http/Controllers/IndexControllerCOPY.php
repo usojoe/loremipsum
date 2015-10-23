@@ -75,13 +75,21 @@ public function postIndex(Request $request)
 		'numberofusers' => 'required|integer|min:1',
 
 		]);
-		
+	// name data source variables from source package
+
+						$name = $faker->name($gender = null|'male'|'female');
+				 		$imagesfaker = $faker->image;
+				 		$addressfaker = $faker->address;
+				 		$emailfaker = $faker->email;
+				 		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
+				 		$profilefaker = $faker->paragraphs($nb = 3);
+
  	// create an array to collect the called set of profiles from Faker
 		$allprofiles = array();
 
 			 for ($i = 0; $i < $users; $i++) {
 
-				$name = $faker->name($gender = null|'male'|'female');
+				 $name = $faker->name($gender = null|'male'|'female');
 		 		$imagesfaker = $faker->image;
 		 		$addressfaker = $faker->address;
 		 		$emailfaker = $faker->email;
@@ -98,7 +106,7 @@ public function postIndex(Request $request)
 
              }
 
-//								dd($allprofiles);
+								dd($allprofiles);
 
 
 

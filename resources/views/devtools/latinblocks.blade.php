@@ -3,6 +3,8 @@
 @section('displaylorem')
 
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
   @foreach ($blocks as $data)
 
     {{ $data }}    <br>
