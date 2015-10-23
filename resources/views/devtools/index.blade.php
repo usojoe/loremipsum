@@ -33,7 +33,7 @@
 
             <input type="hidden" name="_token" value='{{ csrf_token() }}'>
 
-            Blocks of Text to Generate: <input type="number" name="blocks" min="1" max="10">
+            Blocks of Text to Generate: <input type="number" name="paragraphs" min="1" max="10">
 
             <input class="btn btn-primary" type="submit" name="submitbutton" value="Submit">
 

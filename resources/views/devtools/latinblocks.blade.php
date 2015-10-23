@@ -2,12 +2,6 @@
 
 @section('displaylorem')
 
-<p class="scrollbox">
-              <?php
-                  if (isset($blocks))
-                      foreach ($blocks as $paragraph)
-                          echo $paragraph . "<br><br>";
-              ?>
-          </p>
+{{ $blocks }}
 
 @stop

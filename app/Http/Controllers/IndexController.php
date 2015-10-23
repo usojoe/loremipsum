@@ -1,72 +1,93 @@
 <?php
 
+// define the relevant namespaces
 namespace App\Http\Controllers;
 
+// use the following packages
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+// extend how a controller works for this page through a class
 class IndexController extends Controller
 {
-/**
-* Display a listing of the resource.
-*
-* @return \Illuminate\Http\Response
-*/
 
+// direct users who getIndex to the index view
 	public function getIndex()
 	{
 		return view('devtools.index');
 	}
 
+// display information from the LoremIpsum request form
 public function postFakerIndex(Request $request)
 
 {
+// use this package vendor, fzaninotto/Faker
 
 	$faker = \Faker\Factory::create();
 
-	$faker_text = $faker->text(2000);
+// name relevant form variables
+
+	$paragraphs = $request->input('paragraphs');
+
+// define what a block of LoremIpsum Text looks like within the parameters of Faker
+
+	$blocks = $faker->text(2000);
+
+// validate the information in the form was entered correctly
 
 	$this->validate($request, [
 
-	'blocks' => 'required|integer|min:1',
+	'paragraphs' => 'required|integer|min:1',
 
 	]);
 
-echo $faker_text;
+// display the LoremIpsum paragraphs
+
+for ($i = 0; $i < $paragraphs; $i++) {
+
+return view('devtools.latinblocks')->with('blocks',$blocks);
 
 }
 
+}
+// end display of LoremIpsum
+
+
+// begin display of Random User information
 public function postIndex(Request $request)
 {
-	// calling the package
+	// call the package fzaninotto/Faker
 	  $faker = \Faker\Factory::create();
 
+	// name relevant form variables
 		$users = $request->input('numberofusers');
 		$birthday = $request->input('birthday');
 		$images = $request->input('image');
 		$address = $request->input('streetaddress');
 		$profile = $request->input('profile');
 
+
+	// validate information is entered into the form correctly
 	  $this->validate($request, [
 
 		'numberofusers' => 'required|integer|min:1',
 
 		]);
+	// name data source variables from source package
+						$name = $faker->name($gender = null|'male'|'female');
+				 		$imagesfaker = $faker->image;
+				 		$addressfaker = $faker->address;
+				 		$emailfaker = $faker->email;
+				 		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
+				 		$profilefaker = $faker->paragraphs($nb = 3);
 
+	// create an array to collect the called set of profiles from Faker
 		$allprofiles = array();
 
 			 for ($i = 0; $i < $users; $i++) {
 
-				$name = $faker->name;
-		 		$imagesfaker = $faker->image;
-		 		$title = $faker->title;
-		 		$addressfaker = $faker->address;
-		 		$emailfaker = $faker->email;
-		 		$birthdayfaker = $faker->date($format = 'Y-m-d', $max = 'now');
-		 		$profilefaker = $faker->paragraphs($nb = 3);
-
-						//$singleprofile = Array($title, $name);
+	// create an array for a single user with optional selections
 
 		$singleprofile = array();
 
@@ -84,7 +105,7 @@ public function postIndex(Request $request)
 						if ($profile == "TRUE")
 							$singleprofile[] = $profilefaker;
 
-						$allprofiles[] = $singleprofile;
+							$allprofiles[] = $singleprofile;
 
 								}
 
@@ -142,9 +163,6 @@ if isset($blocks->)) {
 
 //  echo implode('<p>', $paragraphs);
 
-// write logic for request-specific delivery and presentation
-
-// that logic goes here
 */
 
 }
