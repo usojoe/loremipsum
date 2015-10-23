@@ -11,6 +11,12 @@ This application depends on the following packages.
 https://github.com/fzaninotto/Faker
 https://github.com/magyarjeti/laravel-lipsum
 
+## Demonstration video
+
+You can watch a demonstration of the applciation here:
+
+http://www.youtube.com/watch?v=yP0ccl4qxmc
+
 ## Security Vulnerabilities
 
 I am not aware of any security vulnerabilities.
